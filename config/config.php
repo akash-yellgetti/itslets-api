@@ -1,10 +1,10 @@
 <?php
 class FConfig {
     /* Database variables */
-    var $dbHost = 'localhost';
+    var $dbHost = 'mysql';
     var $dbName = 'itslets';
     var $dbUser = 'root';
-    var $dbPwd = '';
+    var $dbPwd = 'passw0rd1';
     var $adminContact = '';
     var $supportContact = '';
     var $supportEmail = 'support@itslets.com';

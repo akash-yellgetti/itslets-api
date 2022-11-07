@@ -15,10 +15,12 @@ class FDatabase {
     function __construct() {
         $configObj = new FConfig();
         try {
+
             $this->_resource = new PDO("mysql:host=" . $configObj->dbHost . ";dbname=" . $configObj->dbName, $configObj->dbUser, $configObj->dbPwd);
             $this->_resource->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->_response = 1;
         } catch (PDOException $e) {
+          // die("<pre>".print_r($e, true)."</pre>");
             $this->_response = $e->getMessage();
         }
     }
