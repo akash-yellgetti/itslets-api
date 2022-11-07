@@ -1,0 +1,62 @@
+/* 
+    Document   : paging
+    Created on : Sep 16, 2013, 3:55:04 PM
+    Author     : Amarnath
+    Description: The styles added are meant for paging        
+*/
+
+.ulpaging{
+    float: left;
+    width:100%;
+    list-style: none;
+}
+
+.ulpaging li{
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.pagelink,.pagelink:hover{
+    float: left;
+    margin:0 5px;
+    color:#792476;
+    text-decoration:none;
+    font-weight:normal;
+    font-size:11px;
+}
+
+.paging_active,.paging_active:hover{
+    width:3px;
+    padding:2px 5px 2px 5px;
+    margin:0 5px;
+    background-color:#792476;
+    color:#fff;
+    text-decoration:none;
+    font-weight:normal;
+    font-size:11px;
+}
+
+.paging{
+    width:3px;
+    padding:2px 5px 2px 5px;
+    margin:0 5px;
+    background-color:#fff;
+    text-decoration:none;
+    background-color:#fff;
+    border:solid 1px #dedede;
+    color:#792476;
+    font-weight:normal;
+    font-size:11px;
+}
+
+.paging:hover{
+    width:3px;
+    padding:2px 5px 2px 5px;
+    background-color:#eee;
+    text-decoration:none;
+    color:#792476;
+    margin:0 5px;
+    font-weight:normal;
+    font-size:11px;
+}

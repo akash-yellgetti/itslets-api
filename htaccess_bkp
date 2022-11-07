@@ -1,0 +1,78 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^404 404.php
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f#
+#website 
+RewriteRule ^about-us index.php?param=1
+RewriteRule ^how-it-works index.php?param=2
+RewriteRule ^contact-us index.php?param=3
+RewriteRule ^terms-conditions main/terms.php
+RewriteRule ^faqs main/faq.php
+RewriteRule ^services/getCountries services/get.countries.php
+RewriteRule ^services/saveTempUser services/save.temp.user.php
+RewriteRule ^services/authRegOtp services/auth.reg.otp.php
+RewriteRule ^services/saveRegProfile services/save.reg.profile.php
+RewriteRule ^services/uplProfileGalPic services/upl.profile.gal.pic.php
+RewriteRule ^services/getProfileGallery services/get.profile.gallery.php
+RewriteRule ^services/authUser services/auth.user.php
+RewriteRule ^services/authUserLogin services/auth.user.login.php
+RewriteRule ^services/authLoginOtp services/auth.login.otp.php
+RewriteRule ^services/updateProfilePic services/update.profile.pic.php
+RewriteRule ^services/getUserProfileDetails services/get.user.profile.details.php
+RewriteRule ^services/saveUserProfile services/save.user.profile.php
+RewriteRule ^services/getDiscoverProfile services/get.discover.profile.php
+RewriteRule ^services/getLetsKeywords services/get.lets.keywords.php
+RewriteRule ^services/saveLets services/save.lets.php
+RewriteRule ^services/saveTempLets services/save.temp.lets.php
+RewriteRule ^services/moveTempLetsToLetsRequest services/move.temp.lets.to.lets.request.php
+RewriteRule ^services/getRunningLets services/get.running.lets.php
+RewriteRule ^services/updateLetsLocDetails services/update.lets.loc.details.php
+RewriteRule ^services/getReferrralCode services/get.referrral.code.php
+RewriteRule ^services/checkForgotPassword services/check.forgotpassword.php
+RewriteRule ^services/saveResetPwd services/save.resetpassword.php
+RewriteRule ^services/changePassword services/save.newpassword.php
+
+RewriteRule ^services/getTags services/get.tags.php
+RewriteRule ^services/saveProfileTags services/save.profile.tags.php
+RewriteRule ^services/getLetsTags services/get.lets.tags.php
+
+RewriteRule ^services/cancelLetsByReceiver services/cancel.lets.by.receiver.php
+RewriteRule ^services/cancelLets services/cancel.lets.php
+RewriteRule ^services/setLetsExpired services/set.lets.expired.php
+
+RewriteRule ^services/checkLetsAcceptdPartner services/check.lets.acceptd.partner.php
+RewriteRule ^services/getLetsPartnerDetails services/get.lets.partner.details.php
+RewriteRule ^services/acceptLetsPartner services/accept.lets.partner.php
+RewriteRule ^services/rejectLetsPartner services/reject.lets.partner.php
+
+RewriteRule ^services/checkLetsRequest services/check.lets.request.php
+RewriteRule ^services/getLetsRequest services/get.lets.request.php
+RewriteRule ^services/uploadLetsReqSelfi services/upload.lets.req.selfi.php
+RewriteRule ^services/acceptLetsRequest services/accept.lets.request.php
+RewriteRule ^services/ignoreLetsRequest services/ignore.lets.request.php
+RewriteRule ^services/reportUser services/report.user.php
+RewriteRule ^services/reportLets services/report.lets.php
+RewriteRule ^v2 services/apple.response.php
+
+
+RewriteRule ^services/updateUserLocation services/update.user.location.php
+RewriteRule ^services/updateUserDeviceType services/update.user.device.type.php
+RewriteRule ^services/updateUserDeviceID services/update.user.device.id.php
+RewriteRule ^services/getSubscriptionPlans services/get.subscription.plans.php
+RewriteRule ^services/saveTempSubscription services/save.temp.subscription.php
+RewriteRule ^services/saveSubscription services/save.subscription.php
+RewriteRule ^services/saveIOSSubscription services/save.iossubscription.php
+RewriteRule ^services/getPGKeys  services/get.pgkeys.php
+RewriteRule ^services/savePetType  services/save.pet.type.php
+RewriteRule ^services/getUserSubscription  services/get.user.subscription.php
+RewriteRule ^services/updateSocketID  services/update.socket.id.php
+RewriteRule ^services/saveFCMTokenToServer  services/save.fcm.token.to.server.php
+RewriteRule ^services/getActiveLetsDetails  services/get.active.lets.details.php
+RewriteRule ^services/getGenders  services/get.genders.php
+
+rewritecond %{http_host} ^www.services.itslets.com [nc]
+rewriterule ^(.*)$ http://services.itslets.com/$1 [r=301,nc]
+
+#php_flag display_startup_errors on
+#php_flag display_errors on
