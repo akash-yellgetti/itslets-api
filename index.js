@@ -1,7 +1,16 @@
-let express  = require('express');
-let app      = express();
-let http = require('http').Server(app);
-let io = require('socket.io')(http);
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server, {
+  cors: {
+    origin: "http://web.itslets.com",
+    methods: ["GET", "POST"]
+  }
+});
+
+
  
 io.on('connection', (socket) => {  
 
@@ -36,7 +45,7 @@ io.on('connection', (socket) => {
   });  
 }); 
 
-var port = process.env.PORT || 3000; 
-http.listen(port, function(){
+var port =  process.env.PORT || 3000;
+server.listen(port, function(){
   console.log('node is running on '+ port);
 });

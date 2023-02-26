@@ -1,5 +1,5 @@
 <?php
-
+// die(print_r(phpinfo(), true));
 define('DS', DIRECTORY_SEPARATOR);
 define('ABSOLUTE_PATH', dirname(__FILE__));
 define('RELATIVE_PATH', '');
@@ -19,4 +19,7 @@ $incObj = new FInclude();
 require_once($incObj->getFilePath(RELATIVE_PATH . DS . 'header.php'));
 require_once($incObj->getFilePath(RELATIVE_PATH . DS . 'main' . DS . 'view' . DS . 'default.php'));
 require_once($incObj->getFilePath(RELATIVE_PATH . DS . 'footer.php'));
+
+
+
 ?>

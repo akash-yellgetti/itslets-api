@@ -13,9 +13,9 @@ class FConfig {
     var $clientKey = 'il777';
     /* Project Directory */
     var $rootfolder = 'itslets';
-    var $baseURL = 'http://services.itslets.uat';
+    var $baseURL = 'http://services.itslets.com';
     var $siteName = "itslets";
-    var $siteURL = "http://services.itslets.uat";
+    var $siteURL = "http://services.itslets.com";
     /*Razor Pay*/
 	var $api_key="rzp_test_JrOFPL4lSYYJHw";
 	var $api_secret="e0KiJDw57hKHE8PaH7KN3R5M";
